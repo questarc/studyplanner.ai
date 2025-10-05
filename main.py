@@ -13,7 +13,7 @@ subjects = []
 exams = {}
 
 subject_input = st.sidebar.text_input("Add a subject (e.g., Math)")
-exam_date = st.sidebar.date_input("Exam Date", value=datetime.today())
+exam_date = st.sidebar.date_input("Exam Date", value=date.today())
 
 if st.sidebar.button("➕ Add Subject"):
     if subject_input:
