@@ -1,5 +1,5 @@
 import streamlit as st
-from datetime import datetime
+from datetime import date
 from planner_agent import study_planner_agent
 from utils.icons import subject_icon
 
@@ -18,7 +18,7 @@ exam_date = st.sidebar.date_input("Exam Date", value=datetime.today())
 if st.sidebar.button("➕ Add Subject"):
     if subject_input:
         subjects.append(subject_input)
-        exams[subject_input] = (exam_date - datetime.today()).days
+        exams[subject_input] = (exam_date - date.today()).days
 
 # Run LangGraph Agent
 if st.sidebar.button("📅 Generate Plan"):
